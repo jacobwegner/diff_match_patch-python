@@ -5,7 +5,7 @@ from setuptools import setup, find_packages, Extension
 # python setup.py sdist bdist_wheel
 # twine upload dist/*
 
-module1 = Extension('diff_match_patch',
+module1 = Extension('diff_match_patch_compiled',
                     sources = ['interface.cpp'],
                     include_dirs = [],
                     libraries = [])

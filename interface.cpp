@@ -304,7 +304,7 @@ static PyMethodDef MyMethods[] = {
 PyMODINIT_FUNC
 initdiff_match_patch(void)
 {
-    (void) Py_InitModule("diff_match_patch", MyMethods);
+    (void) Py_InitModule("diff_match_patch_compiled", MyMethods);
 }
 #endif
 
@@ -335,7 +335,7 @@ static PyMethodDef MyMethods[] = {
 
 static struct PyModuleDef mymodule = {
    PyModuleDef_HEAD_INIT,
-   "diff_match_patch",   /* name of module */
+   "diff_match_patch_compiled",   /* name of module */
    NULL, /* module documentation, may be NULL */
    -1,       /* size of per-interpreter state of the module,
                 or -1 if the module keeps state in global variables. */
@@ -343,7 +343,7 @@ static struct PyModuleDef mymodule = {
 };
 
 PyMODINIT_FUNC
-PyInit_diff_match_patch(void)
+PyInit_diff_match_patch_compiled(void)
 {
     return PyModule_Create(&mymodule);
 }
